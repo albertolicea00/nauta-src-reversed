@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootrelative" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@id/AppBar" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="match_parent" android:layout_height="?actionBarSize" card_view:popupTheme="@style/AppTheme.PopupOverlay" /> > </android.support.design.widget.AppBarLayout>
+    <ImageView android:id="@id/headerloginnauta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:layout_marginTop="10.0sp" android:src="@drawable/tiempoconexion" android:layout_below="@id/AppBar" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/AppBar">
+        <android.support.v7.widget.CardView android:id="@id/cardview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="35.0dp" android:layout_marginRight="5.0dp" card_view:cardCornerRadius="5.0dp" card_view:cardElevation="5.0dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TableLayout android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="45.0dp">
+                    <TableRow>
+                        <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:id="@id/statecolumn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Información del usuario:" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/menucolor" android:id="@id/state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="Información del usuario:" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:id="@id/creditcolumn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Información del usuario:" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/menucolor" android:id="@id/credit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="Información del usuario:" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:id="@id/expirationcolumn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Información del usuario:" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/menucolor" android:id="@id/expiration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="Información del usuario:" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:id="@id/accesscolumn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_span="1" android:text="Información del usuario:" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/menucolor" android:id="@id/access" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="Información del usuario:" />
+                    </TableRow>
+                </TableLayout>
+                <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10.0dp" android:layout_below="@id/cardview">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/menucolor" android:layout_gravity="center_horizontal" android:id="@id/ultimas_sesiones" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Últimas sesiones" />
+                        <TableLayout android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:stretchColumns="*">
+                            <TableRow android:background="@color/menucolor" android:padding="2.0dp">
+                                <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/desdecolumn" android:background="@color/menucolor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_span="1" android:text="Desde" />
+                                <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/hastacolumn" android:background="@color/menucolor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_span="1" android:text="Hasta" />
+                                <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/tiempocolumn" android:background="@color/menucolor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_span="1" android:text="Tiempo" />
+                            </TableRow>
+                            <TableRow android:background="@color/row" android:padding="5.0dp">
+                                <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:layout_gravity="center_horizontal" android:id="@id/desde1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_span="1" android:text="desde1" />
+                                <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:layout_gravity="center_horizontal" android:id="@id/hasta1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="hasta1:" />
+                                <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:layout_gravity="center_horizontal" android:id="@id/tiempo1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="hasta1:" />
+                            </TableRow>
+                            <TableRow android:padding="5.0dp">
+                                <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:layout_gravity="center_horizontal" android:id="@id/desde2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="desde1" />
+                                <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:layout_gravity="center_horizontal" android:id="@id/hasta2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="hasta1:" />
+                                <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:layout_gravity="center_horizontal" android:id="@id/tiempo2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="hasta1:" />
+                            </TableRow>
+                            <TableRow android:background="@color/row" android:padding="5.0dp">
+                                <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:layout_gravity="center_horizontal" android:id="@id/desde3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_span="1" android:text="desde1" />
+                                <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:layout_gravity="center_horizontal" android:id="@id/hasta3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="hasta1:" />
+                                <TextView android:textSize="12.0sp" android:textColor="@color/menucolor" android:layout_gravity="center_horizontal" android:id="@id/tiempo3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="hasta1:" />
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

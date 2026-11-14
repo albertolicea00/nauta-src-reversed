@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/userterms" android:orderInCategory="100" android:title="Términos de uso" app:showAsAction="never" />
+    <item android:id="@id/userconditions" android:orderInCategory="100" android:title="Condiciones de uso" app:showAsAction="never" />
+    <item android:id="@id/settings" android:orderInCategory="100" android:title="Configuración" app:showAsAction="never" />
+    <item android:id="@id/about" android:orderInCategory="100" android:title="Acerca de" app:showAsAction="never" />
+</menu>

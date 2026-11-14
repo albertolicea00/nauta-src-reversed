@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@id/cardview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginRight="5.0dp" android:layout_marginBottom="3.0dp" card_view:cardCornerRadius="5.0dp" card_view:cardElevation="2.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/relativelayoutmenuitem" android:background="@drawable/layoutbottomborder" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:foreground="?android:selectableItemBackground">
+        <ImageView android:id="@id/menuicon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/portalautenticacion" android:layout_centerHorizontal="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="2.0dp" android:layout_below="@id/menuicon">
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/menuname" android:paddingBottom="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="No se encuentran aps de ETECSA" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

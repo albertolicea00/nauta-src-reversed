@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootrelative" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@id/AppBar" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="match_parent" android:layout_height="?actionBarSize" card_view:popupTheme="@style/AppTheme.PopupOverlay" /> > </android.support.design.widget.AppBarLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/AppBar">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <android.support.v7.widget.CardView android:id="@id/cardview1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="35.0dp" card_view:cardCornerRadius="5.0dp" card_view:cardElevation="2.0dp" card_view:cardUseCompatPadding="true">
+                <LinearLayout android:orientation="vertical" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:src="@drawable/etecsa" android:layout_alignParentLeft="true" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:layout_marginRight="5.0dp" android:src="@drawable/nauta" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dp">
+                            <TextView android:textSize="12.0dp" android:textColor="@color/menucolor" android:layout_gravity="center" android:id="@id/usuario_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Usuario:" />
+                            <AutoCompleteTextView android:textColor="@color/menucolor" android:id="@id/username" android:background="@drawable/edittextrounded" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginRight="5.0dp" android:layout_marginBottom="10.0dp" android:maxLength="50" android:drawableLeft="@drawable/user" android:completionThreshold="1" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp">
+                            <TextView android:textSize="12.0dp" android:textColor="@color/menucolor" android:layout_gravity="center" android:id="@id/password_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contraseña:" />
+                            <EditText android:textColor="@color/menucolor" android:id="@id/password" android:background="@drawable/edittextrounded" android:padding="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginRight="5.0dp" android:layout_marginBottom="10.0dp" android:maxLength="25" android:drawableLeft="@drawable/password" android:inputType="textPassword" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_marginBottom="10.0dp">
+                            <CheckBox android:id="@id/show_passwordcb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginRight="5.0dp" android:text="Mostrar contraseña" />
+                            <CheckBox android:id="@id/remembercb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginRight="5.0dp" android:text="Recordar" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <Button android:textSize="15.0sp" android:textColor="@color/disableditemcardviewlight" android:layout_gravity="center" android:id="@id/loginbtn" android:background="@color/disableditemcardview" android:paddingLeft="25.0dp" android:paddingRight="25.0dp" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginTop="5.0dp" android:layout_marginRight="10.0dp" android:foreground="?android:selectableItemBackground" android:text="ACEPTAR" />
+                            <Button android:textSize="15.0sp" android:textColor="@color/disableditemcardview" android:layout_gravity="center" android:id="@id/infobtn" android:background="@color/white" android:paddingLeft="25.0dp" android:paddingRight="25.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginRight="10.0dp" android:text="Información de usuario" style="@style/Widget.AppCompat.Button.Borderless" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <ImageView android:id="@id/icono" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:layout_marginTop="20.0sp" android:src="@drawable/wifiicon" android:layout_centerHorizontal="true" />
+            <android.support.v7.widget.CardView android:id="@id/cardview2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:layout_below="@id/cardview1" card_view:cardCornerRadius="5.0dp" card_view:cardElevation="8.0dp" card_view:cardUseCompatPadding="true">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="25.0sp" android:textColor="@color/cardviewerror" android:id="@id/errorcardviewicon" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="@string/error" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/cardviewerror" android:id="@id/errorcardviewtext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dp" android:text="*¡Está conectado a un AP que no pertenece a ETECSA!*" android:layout_toRightOf="@id/errorcardviewicon" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

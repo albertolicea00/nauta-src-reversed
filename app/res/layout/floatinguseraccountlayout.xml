@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:orientation="vertical" android:id="@id/rootcontainer" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.8" card_view:cardCornerRadius="5.0dp" card_view:cardElevation="5.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/floatinglayout" android:background="@color/colorPrimary" android:padding="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/tiemporestanteheader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dp" android:text="TR:" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/tiemporestante" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dp" android:text="Tiempo de conexión:" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/servicewificon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wifi" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/servicewifisignal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Excelente" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/servicedownloadicon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="@string/arrowdown" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/servicedownload" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25KB/S" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/serviceuploadicon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="@string/arrowup" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/serviceupload" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25KB/S" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

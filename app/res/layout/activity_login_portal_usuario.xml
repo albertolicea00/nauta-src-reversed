@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rootrelative" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@id/AppBar" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="match_parent" android:layout_height="?actionBarSize" card_view:popupTheme="@style/AppTheme.PopupOverlay" /> > </android.support.design.widget.AppBarLayout>
+    <WebView android:id="@id/webview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/AppBar" />
+    <android.support.v7.widget.CardView android:id="@id/errorcardview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/AppBar" card_view:cardElevation="8.0dp" card_view:cardUseCompatPadding="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="25.0sp" android:textColor="@color/cardviewerror" android:id="@id/errorcardviewicon" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:text="@string/error" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/menucolor" android:id="@id/errorcardviewtext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="No se pudo cargar el sitio" android:layout_toRightOf="@id/errorcardviewicon" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
