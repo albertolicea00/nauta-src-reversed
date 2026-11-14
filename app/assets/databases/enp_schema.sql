@@ -1,0 +1,12 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE user (id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE ON CONFLICT ROLLBACK, user VARCHAR (50), password VARCHAR (30));
+CREATE TABLE session (id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE ON CONFLICT ROLLBACK, remaining_time_url TEXT, logout_url TEXT, time_elapsed TEXT DEFAULT "00:00");
+CREATE TABLE userterms (id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, seen BOOLEAN);
+CREATE TABLE time (id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, time TEXT);
+CREATE TABLE sessionfake (id INTEGER PRIMARY KEY AUTOINCREMENT, remaining_time_url TEXT, logout_url TEXT, mac TEXT, date DATETIME);
+CREATE TABLE settings (id INTEGER PRIMARY KEY AUTOINCREMENT, showwidget BOOLEAN, showdownload BOOLEAN, showsignal BOOLEAN, showupload BOOLEAN, remember BOOLEAN, disconnect BOOLEAN);
+INSERT INTO settings VALUES(1,'true','true','true','true','true','false');
+INSERT INTO sqlite_sequence VALUES('session',0);
+INSERT INTO sqlite_sequence VALUES('settings',1);
+COMMIT;
