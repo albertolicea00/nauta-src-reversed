@@ -1,0 +1,10 @@
+{
+  "_meta": {
+    "package": "cu.etecsa.enp_oficial",
+    "apk_version": "v1.2.0.1",
+    "version_code": 1,
+    "format": "obfuscated → clean mapping",
+    "notes": "Derived from static analysis of JADX decompiled source (pending initial decompilation)"
+  },
+  "classes": {}
+}
