@@ -1,22 +1,24 @@
-# Networking & Endpoints
+# Networking & TLS
 
-Target: `cu.etecsa.enp_oficial` v1.2.0.1 (versionCode `1`).
+Analysis of HTTP clients, endpoints, and TLS configuration in `cu.etecsa.enp_oficial`.
 
-> [!NOTE]
-> **Status:** Structural template (pending decompilation). Known ETECSA Nauta domains are listed below as initial references; verify exact hardcoded URLs, ports, HTTP clients, and TLS trust managers from decompiled source.
+## Observed Endpoints
 
-## Ecosystem & Known Infrastructure Domains
+| Endpoint | Component | Purpose |
+|---|---|---|
+| `https://secure.etecsa.net:8443` | `LoginNautaPortal` | Fetch `CSRFHW` token and `JSESSIONID` cookie |
+| `https://secure.etecsa.net:8443/EtecsaQueryServlet` | `LoginNautaPortal`, `NautaInfoActivity` | Captive portal authentication and remaining-time polling |
+| `https://secure.etecsa.net:8443/LogoutServlet` | `NautaInfoActivity` | Captive portal session logout |
+| `https://www.portal.nauta.cu/user/login/es-es/` | `LoginPortalUsuario` | User Portal `WebView` |
+| `https://enpserver.nauta.cu/api-enp/checkmac/` | `MainActivity` → `WifiAPService` | Official vs. rogue Wi-Fi AP MAC verification |
+| `http://connectivitycheck.android.com/generate_204` | `MainActivity` | Captive portal / internet reachability probe |
+| `http://192.168.43.227:8000/api-enp/userfakeap/` | `SendAccountService` → `WifiAPService` | Leftover development URL for fake-AP telemetry |
+| `http://192.168.43.227:8000/api-enp/useretecsaap/` | `SendAccountService` → `WifiAPService` | Leftover development URL for ETECSA-AP telemetry |
 
-| Domain / URL | Role |
-| :--- | :--- |
-| `https://www.nauta.cu/` | Unified Nauta User Portal (self-service account management, balance, recharges, transfers) |
-| `https://portal.nauta.cu/` | Legacy Nauta User Portal endpoint often referenced by older Android clients |
-| `https://secure.etecsa.net:8443/` | Captive portal authentication and session management gateway (`LoginServlet`, `LogoutServlet`, `EtecsaQueryServlet`) |
-| `https://www.etecsa.cu/` | ETECSA official corporate portal and APK download source |
-| `https://www.apklis.cu/application/cu.etecsa.enp_oficial` | Official Android distribution page on Apklis |
+## HTTP Clients & TLS Pinning
 
-## Pending Analysis Sections (Post-Decompilation)
-
-- **HTTP Client Stack:** `HttpURLConnection` / OkHttp / Apache HttpClient / Jsoup usage, cookie jar handling (`JSESSIONID`), timeouts, and User-Agent headers.
-- **Network Routing & Mobile Data Toggle:** How the app switches or binds between `WIFI_ETECSA` and mobile data (`nauta` APN) when opening the User Portal.
-- **TLS & Certificate Pinning:** Custom `X509TrustManager`, `HostnameVerifier`, or bundled ETECSA root/intermediate certificates for `secure.etecsa.net:8443` and `portal.nauta.cu`.
+- **Retrofit 2 + OkHttp 3 + Gson** (`WifiAPService`):
+  - `MainActivity` configures `OkHttpClient.Builder` with a custom `SSLSocketFactory` from `SslContextHelper.a(Context)` (`g/a.java`), which loads the X.509 certificate `R.raw.server` (`res/raw/server.crt`) into a `KeyStore` and `TrustManagerFactory`.
+  - `MainActivity` pairs this with a `HostnameVerifier` checking `hostname.equals("enpserver.nauta.cu")`.
+- **Jsoup** (`LoginNautaPortal`, `NautaInfoActivity`):
+  - Performs direct HTTPS form GET/POST requests to `secure.etecsa.net:8443` and parses HTML/JS responses via `NautaHtmlParser` (`g/c.java`).
