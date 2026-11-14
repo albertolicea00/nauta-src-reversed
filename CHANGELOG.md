@@ -8,3 +8,4 @@
 - Created initial documentation set in `docs/` (`target-metadata.md`, `versioning.md`, `architecture.md`, `captive-portal-protocol.md`, `networking.md`, `security.md`, `storage.md`, `domain-model.md`, `reconstruction-inventory.md`, `unmapped-source-review.md`, `java-compilation.md`, `runtime-validation.md`).
 - Added `README.md` with target metadata, official ETECSA Nauta web and portal references (`www.nauta.cu`, `portal.nauta.cu`, `secure.etecsa.net:8443`, `etecsa.cu`, Apklis), project status, documentation index, versioning strategy, and repository structure.
 - Added `AGENTS.md` repository working guide and `TODO.md` reverse-engineering checklist.
+- Added a `Related Repositories` cross-reference table in `README.md` linking all six Cuban Android reverse-engineering repositories.
