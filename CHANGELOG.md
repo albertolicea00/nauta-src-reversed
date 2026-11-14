@@ -9,3 +9,7 @@
 - Added `README.md` with target metadata, official ETECSA Nauta web and portal references (`www.nauta.cu`, `portal.nauta.cu`, `secure.etecsa.net:8443`, `etecsa.cu`, Apklis), project status, documentation index, versioning strategy, and repository structure.
 - Added `AGENTS.md` repository working guide and `TODO.md` reverse-engineering checklist.
 - Added a `Related Repositories` cross-reference table in `README.md` linking all six Cuban Android reverse-engineering repositories.
+- Decompiled `cu.etecsa.enp_oficial-v1.apk` with JADX 1.5.6 and Apktool 3.0.3 (`src/`, `app/AndroidManifest.xml`, `app/res/`, `app/assets/databases/enp_schema.sql`) and archived local `smali/` to `.workspace/archives/smali-1.2.0.1.1.zip` (SHA-256: `85c41d79a8922cc2ce0a85424736ebf33d9d193448b9a20784c337aae78e2e96`).
+- Reconstructed all 34 application Java classes under `app/src/main/java/cu/etecsa/enp_oficial/` (deobfuscating `a..d`, `e.a.*`, `f.*`, and `g.*`) and mapped them in `mappings/classes.json`.
+- Completed static analysis across `docs/architecture.md`, `docs/captive-portal.md`, `docs/email-protocol.md`, `docs/networking.md`, `docs/security.md`, `docs/storage.md`, `docs/domain-model.md`, `docs/unmapped-source-review.md`, `docs/java-compilation.md`, `docs/runtime-validation.md`, and `docs/versioning.md`.
+- Tagged baseline release `1.2.0.1.1-v1.0`.
