@@ -46,6 +46,12 @@ unzip .workspace/archives/smali-1.2.0.1.1.zip -d .
 
 Record the APK SHA-256, archive SHA-256, and decompiler versions for each target. Local ZIPs may later be uploaded as Release assets; APK binaries remain local.
 
+### Recorded Baseline Hashes (`1.2.0.1.1-v1.0`)
+
+- **Target APK**: `cu.etecsa.enp_oficial-v1.apk` — SHA-256: `037f7bf4ddb93ed828507b1a42b97bfdb132c8744525e3338d8e76ebfdfaf32a`
+- **Local Smali Archive**: `.workspace/archives/smali-1.2.0.1.1.zip` — SHA-256: `85c41d79a8922cc2ce0a85424736ebf33d9d193448b9a20784c337aae78e2e96`
+- **Tools**: `jadx 1.5.6`, `apktool 3.0.3`
+
 ## Comparing APK Releases
 
 Compare the first release tags for each APK. Substitute actual tag names for future versions.
