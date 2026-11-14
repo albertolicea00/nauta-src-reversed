@@ -13,3 +13,4 @@
 - Reconstructed all 34 application Java classes under `app/src/main/java/cu/etecsa/enp_oficial/` (deobfuscating `a..d`, `e.a.*`, `f.*`, and `g.*`) and mapped them in `mappings/classes.json`.
 - Completed static analysis across `docs/architecture.md`, `docs/captive-portal.md`, `docs/email-protocol.md`, `docs/networking.md`, `docs/security.md`, `docs/storage.md`, `docs/domain-model.md`, `docs/unmapped-source-review.md`, `docs/java-compilation.md`, `docs/runtime-validation.md`, and `docs/versioning.md`.
 - Tagged baseline release `1.2.0.1.1-v1.0`.
+- Updated `scripts/update-progress.py` to combine `TODO.md` task-list progress (`34/38`, `89%`) with `scripts/mapping-stats.sh` source reconstruction (`34/35`, `97%`) for an overall `93%` progress bar, and refreshed `README.md` exact source link counts (`34/35 (97%)`).
