@@ -4,7 +4,212 @@
     "apk_version": "v1.2.0.1",
     "version_code": 1,
     "format": "obfuscated → clean mapping",
-    "notes": "Derived from static analysis of JADX decompiled source (pending initial decompilation)"
+    "notes": "Complete static mapping of Entorno Nauta Portal (cu.etecsa.enp_oficial) from JADX 1.5.6 and Apktool 3.0.3"
   },
-  "classes": {}
+  "classes": {
+    "cu.etecsa.enp_oficial.About": {
+      "clean": "cu.etecsa.enp_oficial.About",
+      "role": "Displays application version and ETECSA credits",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.InfoUser": {
+      "clean": "cu.etecsa.enp_oficial.InfoUser",
+      "role": "Displays user profile and Nauta account status",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.LoginNautaPortal": {
+      "clean": "cu.etecsa.enp_oficial.LoginNautaPortal",
+      "role": "Authenticates Nauta Wi-Fi credentials against https://secure.etecsa.net:8443/EtecsaQueryServlet",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.LoginPortalUsuario": {
+      "clean": "cu.etecsa.enp_oficial.LoginPortalUsuario",
+      "role": "WebView wrapper for https://www.portal.nauta.cu/user/login/es-es/",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.MainActivity": {
+      "clean": "cu.etecsa.enp_oficial.MainActivity",
+      "role": "Primary dashboard checking connectivitycheck.android.com/generate_204 and verifying AP MAC against enpserver.nauta.cu",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.NautaInfoActivity": {
+      "clean": "cu.etecsa.enp_oficial.NautaInfoActivity",
+      "role": "Active session monitor polling EtecsaQueryServlet and triggering LogoutServlet",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.SendAccountService": {
+      "clean": "cu.etecsa.enp_oficial.SendAccountService",
+      "role": "Background service reporting AP/user telemetry to api-enp/userfakeap/ and api-enp/useretecsaap/",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.Settings": {
+      "clean": "cu.etecsa.enp_oficial.Settings",
+      "role": "User preferences screen backed by enp.db settings table",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.SplashScreenActivity": {
+      "clean": "cu.etecsa.enp_oficial.SplashScreenActivity",
+      "role": "Launcher splash activity initializing database and routing to MainActivity",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.UserAccountService": {
+      "clean": "cu.etecsa.enp_oficial.UserAccountService",
+      "role": "Floating overlay WindowManager service showing live session timer",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.a": {
+      "clean": "cu.etecsa.enp_oficial.ui.dialog.VerifyingProgressDialogFragment",
+      "role": "Progress dialog displaying 'Verificando' during AP MAC verification",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.api.WifiAPService": {
+      "clean": "cu.etecsa.enp_oficial.api.WifiAPService",
+      "role": "Retrofit interface for api-enp/checkmac/, api-enp/userfakeap/, and api-enp/useretecsaap/",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.b": {
+      "clean": "cu.etecsa.enp_oficial.ui.dialog.AuthenticatingProgressDialogFragment",
+      "role": "Progress dialog displaying 'Autenticando' during captive portal login",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.c": {
+      "clean": "cu.etecsa.enp_oficial.ui.dialog.LoadingProgressDialogFragment",
+      "role": "Progress dialog displaying 'Cargando' during portal page loads",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.d": {
+      "clean": "cu.etecsa.enp_oficial.ui.dialog.ConnectingProgressDialogFragment",
+      "role": "Progress dialog displaying 'Conectando' during Wi-Fi/portal connection",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.e.a.a": {
+      "clean": "cu.etecsa.enp_oficial.ui.adapter.OnRecyclerItemClickListener",
+      "role": "Click listener interface for RecyclerView items",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.e.a.b": {
+      "clean": "cu.etecsa.enp_oficial.ui.adapter.MenuIconAdapter",
+      "role": "RecyclerView adapter rendering main dashboard menu icons",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.e.a.c": {
+      "clean": "cu.etecsa.enp_oficial.ui.adapter.MenuIconViewHolder",
+      "role": "RecyclerView ViewHolder for dashboard menu tiles",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.e.a.d": {
+      "clean": "cu.etecsa.enp_oficial.ui.adapter.SettingsAdapter",
+      "role": "RecyclerView adapter rendering settings toggles",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.e.a.e": {
+      "clean": "cu.etecsa.enp_oficial.ui.adapter.SettingsViewHolder",
+      "role": "RecyclerView ViewHolder for settings rows",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.f.a": {
+      "clean": "cu.etecsa.enp_oficial.ui.adapter.EmailDomainAutoCompleteAdapter",
+      "role": "AutoCompleteTextView adapter suggesting @nauta.com.cu / @nauta.co.cu domains",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.f.b": {
+      "clean": "cu.etecsa.enp_oficial.model.DomainSuggestionItem",
+      "role": "Autocomplete suggestion entry holding username prefix and Nauta domain",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.g.a": {
+      "clean": "cu.etecsa.enp_oficial.util.SslContextHelper",
+      "role": "Loads pinned X.509 certificate R.raw.server into a TLS SSLContext",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.g.b": {
+      "clean": "cu.etecsa.enp_oficial.data.EnpDatabaseHelper",
+      "role": "SQLiteAssetHelper wrapper opening bundled assets/databases/enp.db (version 1)",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.g.c": {
+      "clean": "cu.etecsa.enp_oficial.util.NautaHtmlParser",
+      "role": "JSoup and substring parser for secure.etecsa.net:8443 login, ATTRIBUTE_UUID, and remaining time",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.g.d": {
+      "clean": "cu.etecsa.enp_oficial.util.FontHelper",
+      "role": "Applies bundled assets/fonts/*.ttf Typeface onto TextView instances",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.model.LoginPortalNautaData": {
+      "clean": "cu.etecsa.enp_oficial.model.LoginPortalNautaData",
+      "role": "Captive portal login state model (URL and status message)",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.model.MenuIconItem": {
+      "clean": "cu.etecsa.enp_oficial.model.MenuIconItem",
+      "role": "Dashboard menu item model (title and drawable resource)",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.model.NautaInfoData": {
+      "clean": "cu.etecsa.enp_oficial.model.NautaInfoData",
+      "role": "Active Nauta session info model",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.model.ServicePostAp": {
+      "clean": "cu.etecsa.enp_oficial.model.ServicePostAp",
+      "role": "Retrofit request/response DTO for AP MAC verification",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.model.ServicePostUserClient": {
+      "clean": "cu.etecsa.enp_oficial.model.ServicePostUserClient",
+      "role": "Retrofit DTO for AP telemetry submission",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.model.Session": {
+      "clean": "cu.etecsa.enp_oficial.model.Session",
+      "role": "Active session state model persisted in enp.db",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.model.SettingsItem": {
+      "clean": "cu.etecsa.enp_oficial.model.SettingsItem",
+      "role": "Settings toggle model (title, subtitle, checked state)",
+      "status": "reconstructed",
+      "confidence": "high"
+    },
+    "cu.etecsa.enp_oficial.model.UserInfo": {
+      "clean": "cu.etecsa.enp_oficial.model.UserInfo",
+      "role": "User account credentials/profile model",
+      "status": "reconstructed",
+      "confidence": "high"
+    }
+  }
 }
