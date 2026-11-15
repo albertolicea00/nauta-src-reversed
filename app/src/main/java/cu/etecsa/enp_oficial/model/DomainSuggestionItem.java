@@ -15,7 +15,7 @@ public class DomainSuggestionItem {
     /* JADX INFO: renamed from: b, reason: collision with root package name */
     private String f2302b;
 
-    public b(String str, String str2) {
+    public DomainSuggestionItem(String str, String str2) {
         this.f2301a = str;
         this.f2302b = str2;
     }

@@ -10,7 +10,7 @@ import android.content.Context;
  * @obfuscated_class cu.etecsa.enp_oficial.g.b
  */
 public class EnpDatabaseHelper extends b.b.a.a {
-    public b(Context context) {
+    public EnpDatabaseHelper(Context context) {
         super(context, "enp.db", null, 1);
     }
 }

@@ -21,7 +21,7 @@ public class SettingsAdapter extends RecyclerView.f<e> {
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     public a f2296d;
 
-    public d(Activity activity, ArrayList<SettingsItem> arrayList, a aVar) {
+    public SettingsAdapter(Activity activity, ArrayList<SettingsItem> arrayList, a aVar) {
         this.f2295c = arrayList;
         this.f2296d = aVar;
     }

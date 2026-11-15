@@ -24,7 +24,7 @@ public class MenuIconAdapter extends RecyclerView.f<c> {
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     public a f2292e;
 
-    public b(Activity activity, ArrayList<MenuIconItem> arrayList, a aVar) {
+    public MenuIconAdapter(Activity activity, ArrayList<MenuIconItem> arrayList, a aVar) {
         this.f2291d = arrayList;
         this.f2290c = activity;
         this.f2292e = aVar;

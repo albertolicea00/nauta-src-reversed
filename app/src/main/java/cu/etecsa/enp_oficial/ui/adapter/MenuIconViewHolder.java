@@ -40,7 +40,7 @@ public class MenuIconViewHolder extends RecyclerView.c0 {
         }
     }
 
-    public c(View view, cu.etecsa.enp_oficial.e.a.a aVar) {
+    public MenuIconViewHolder(View view, cu.etecsa.enp_oficial.e.a.a aVar) {
         super(view);
         this.w = (ImageView) view.findViewById(R.id.menuicon);
         this.t = (TextView) view.findViewById(R.id.menuname);

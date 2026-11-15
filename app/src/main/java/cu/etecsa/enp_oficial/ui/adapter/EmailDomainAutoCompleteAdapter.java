@@ -71,7 +71,7 @@ public class EmailDomainAutoCompleteAdapter extends ArrayAdapter<b> {
         }
     }
 
-    public a(Context context, List<b> list) {
+    public EmailDomainAutoCompleteAdapter(Context context, List<b> list) {
         super(context, 0, list);
         this.f2299c = new C0059a();
         this.f2298b = new ArrayList(list);

@@ -28,7 +28,7 @@ public class SettingsViewHolder extends RecyclerView.c0 {
         }
     }
 
-    public e(View view, cu.etecsa.enp_oficial.e.a.a aVar) {
+    public SettingsViewHolder(View view, cu.etecsa.enp_oficial.e.a.a aVar) {
         super(view);
         this.t = (TextView) view.findViewById(R.id.settingsitemname);
         this.u = (TextView) view.findViewById(R.id.settingsitemdescripcion);

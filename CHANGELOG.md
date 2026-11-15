@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-15 — cu.etecsa.enp_oficial-v1.apk — SHA-256: `037f7bf4ddb93ed828507b1a42b97bfdb132c8744525e3338d8e76ebfdfaf32a`
+
+- Fixed 7 leftover obfuscated constructor names (`EnpDatabaseHelper`, `DomainSuggestionItem`, `EmailDomainAutoCompleteAdapter`, `MenuIconAdapter`, `MenuIconViewHolder`, `SettingsAdapter`, `SettingsViewHolder`) in `app/src/main/java/cu/etecsa/enp_oficial/` that blocked `javac` parsing.
+- Ran `make compile-audit` against `android-37.0/android.jar` and `.workspace/tools/target-bytecode.jar` (`javac 17.0.15`), advancing from 7 parse errors to 95 type/symbol attribution errors in 12 of 34 clean files, and recorded the exact findings in `docs/java-compilation.md`.
+
 ## 2026-11-14 — cu.etecsa.enp_oficial-v1.apk — SHA-256: `037f7bf4ddb93ed828507b1a42b97bfdb132c8744525e3338d8e76ebfdfaf32a`
 
 - Initialized repository directory structure (`app/assets/`, `app/res/`, `app/src/main/java/`, `src/`, `smali/`, `mappings/evidence/`, `scripts/tests/`, `docs/`, `.workspace/bin/`, `.workspace/archives/`) matching `transfermovil-src-reversed` without starting APK decompilation yet.
